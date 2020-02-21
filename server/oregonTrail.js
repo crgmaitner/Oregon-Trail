@@ -1,7 +1,26 @@
 const express = require('express')
 const app = express()
+app.use(express.static('client/public'));
 const port = 1337
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', function (req, res) {
+    res.sendFile('index.html', {root: './client/views' })
+    })
 
+app.get('/', function (req, res) {
+    res.sendFile('mainmenu.html', {root: './client/views'})
+    })
+
+app.get('/', function (req, res) {
+    res.sendFile('setup.html', {root: './client/views'})
+})
+
+app.get('/', function (req, res) {
+    res.sendFile('topten.html', {root: './client/views'})
+})
+
+app.get('/', function (req, res){
+    res.sendFile('trail.html', {root: './client/views'})
+})
+    
 app.listen(port, () => console.log(`Listening on port ${port}.`))

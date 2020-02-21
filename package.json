@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/crgmaitner/CMaitner-Project/issues"
   },
-  "homepage": "https://github.com/crgmaitner/CMaitner-Project#readme"
+  "homepage": "https://github.com/crgmaitner/CMaitner-Project#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
