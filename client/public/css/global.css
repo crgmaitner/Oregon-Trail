@@ -1,0 +1,60 @@
+@font-face {
+  font-family: oregonFont;
+  src: url("/fonts/RODEO.ttf");
+}
+
+body {
+    display: grid;
+    justify-content: center;
+
+    background-image: url("/images/titlescreen.png");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: black;
+
+    margin: 0;
+    height: 100vh;
+
+    color: white;
+}
+
+main {
+	align-self: center;
+
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+
+    background-color: black;
+
+    width: 1160px;
+    height: 720px;
+}
+
+#top_image {
+    padding-top: 10px;
+}
+
+.menu_text {
+    font-family: oregonFont;
+	text-align: center;
+    font-size: 48px;
+}
+
+.normal_button {
+	font-size: 24px;
+    cursor: pointer;
+}
+
+#menu_button {
+	background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+}
