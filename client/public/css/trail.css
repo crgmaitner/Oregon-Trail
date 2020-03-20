@@ -1,0 +1,27 @@
+#game_space {
+    display: grid;
+    justify-content: center;
+}
+
+#game_board {
+    position: relative;
+}
+
+#trail_bg {
+    width: 800px;
+    height: 360px;
+}
+
+#wagon {
+    height: 80px;
+    width: 320px;
+    position: absolute;
+    bottom: 0;
+    right: -160px;
+}
+
+#game_stats {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+}

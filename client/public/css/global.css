@@ -1,0 +1,58 @@
+@font-face {
+  font-family: oregonFont;
+  src: url("/fonts/PrintChar21.ttf");
+}
+
+body {
+    display: grid;
+    justify-content: center;
+
+    background-image: url("/images/titlescreen.png");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: black;
+
+    margin: 0;
+    height: 100vh;
+
+    color: white;
+}
+
+main {
+	align-self: center;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    background-color: black;
+
+    width: 1160px;
+    height: 720px;
+}
+
+#top_image {
+    padding-top: 5px;
+}
+
+#bottom_image {
+    padding-bottom: 5px;
+}
+
+.normal_button {
+	font-family: oregonFont;
+	font-size: 26px;
+    cursor: pointer;
+}
+
+#menu_button {
+	background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    
+	font-family: oregonFont;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+}

@@ -1,0 +1,29 @@
+#top_ten_title{
+	justify-self: flex-start;
+    align-self: center;
+
+    margin-left: 200px;
+    margin-right: 200px;
+    
+    font-family: oregonFont;
+    text-align: center;
+}
+
+#top_ten {
+	align-self: center;
+}
+
+#top_ten_table {
+	border: 1px solid white;
+	border-collapse: collapse;
+	width: 800px;
+
+	font-family: oregonFont;
+}
+
+#top_ten_table tr,
+#top_ten_table th,
+#top_ten_table td {
+	border: 1px solid white;
+	text-align: center;
+}
