@@ -1,0 +1,71 @@
+@font-face {
+  font-family: oregonFont;
+  src: url("/fonts/PrintChar21.ttf");
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: url("/images/titlescreen.png");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: black;
+
+    margin: 0;
+    height: 100vh;
+
+    color: white;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 68px 494px 68px 90px;
+    
+    background-color: black;
+
+    width: 1160px;
+    height: 720px;
+}
+
+#border_image {
+    background-color: black;
+}
+
+#bottom_text {
+    display: block;
+    background-color: black;
+    height: 90px;
+}
+
+.oregon_text {
+    font-family: oregonFont;
+    font-size: 28px;
+    margin-top: 0;
+}
+
+.normal_button {
+	font-family: oregonFont;
+	font-size: 28px;
+    cursor: pointer;
+}
+
+.normal_button td {
+    vertical-align: top;
+}
+
+.menu_button {
+	background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    
+    padding: 12px 20px;
+    
+	font-family: oregonFont;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+}

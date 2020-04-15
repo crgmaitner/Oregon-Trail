@@ -1,0 +1,60 @@
+#game_board {
+    padding-top: 20px;
+    position: relative;
+}
+
+#trail_bg {
+    width: 1160px;
+    height: 260px;
+}
+
+#wagon {
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+
+    height: 80px;
+    width: 320px;
+}
+
+#message_box {
+    position: absolute;
+    top: 20px;
+    left: 400px;
+
+    background-color: black;
+
+    margin-top: 20px;
+    width: 360px;
+
+    border-radius: 8px;
+    border: solid white 4px;
+
+    text-align: center;
+    font-family: oregonFont;
+}
+
+#game_stats {
+    padding-top: 24px;
+    display: grid;
+    justify-content: center;
+
+    font-family: oregonFont;
+}
+
+.stat {
+    padding: 0 16px;
+    text-align: right;
+    width: 500px;
+}
+
+.value {
+    width: 500px;
+}
+
+.moves_text {    
+    font-family: oregonFont;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}

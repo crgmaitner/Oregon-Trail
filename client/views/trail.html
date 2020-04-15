@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/global.css">
+        <link rel="stylesheet" type="text/css" href="/css/trail.css">
+        
+        <script type="text/javascript" src="/js/global.js"></script>
+        <script type="text/javascript" src="/js/trail.js"></script>
+
+        <title>Oregon Trail</title>
+    </head>
+    <body>
+        <main>
+            <img id="border_image" src="/images/border.png">
+            <div>
+                <div id="game_board">
+                    <img id="trail_bg">
+                    <img id="wagon" src="/images/wagon.png">
+                    <div id="message_box"></div>
+                </div>
+                <table id="game_stats">
+                    <tr>
+                        <td class="stat">Days on Trail:</td>
+                        <td class="value" id="daysOnTrail"></td>
+                    </tr>
+                    <tr>
+                        <td class="stat">Miles Traveled:</td>
+                        <td class="value" id="milesTraveled"></td>
+                    </tr>
+                    <tr>
+                        <td class="stat">Current Health:</td>
+                        <td class="value" id="groupHealth"></td>
+                    </tr>
+                    <tr>
+                        <td class="stat">Current Weather:</td>
+                        <td class="value" id="currentWeather"></td>
+                    </tr>
+                    <tr>
+                        <td class="stat">Current Pace:</td>
+                        <td class="value" id="currentPace"></td>
+                    </tr>
+                    <tr>
+                        <td class="stat">Current Terrain:</td>
+                        <td class="value" id="currentTerrain"></td>
+                    </tr>
+                    <tr>
+                        <td class="stat"># of Party Members:</td>
+                        <td class="value" id="playerStatus"></td>
+                    </tr>
+                </table>
+            </div>
+            <img id="border_image" src="/images/border.png">
+            <div id="bottom_text">
+                <p class="moves_text" id="fade_text">Press SPACE BAR to change pace or ENTER to travel a day</p>
+            </div>
+        </main>
+        <audio id="audio_player" loop>
+            <source src="/music/menu_song.mp3" type="audio/mpeg">
+        </audio>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+main {
+	grid-template-rows: 180px 382px 68px 90px;
+}
+
+#main_menu {
+	margin: 60px 200px;
+}
