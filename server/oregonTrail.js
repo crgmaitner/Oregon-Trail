@@ -22,11 +22,11 @@ app.get('/mainmenu', function (req, res) {
 
 app.get('/setup', function (req, res) {
     res.sendFile('setup.html', {root: './client/views'})
-})
+    })
 
 app.get('/topten', function (req, res) {
     res.sendFile('topten.html', {root: './client/views'})
-})
+    })
 
 app.get('/trail', function (req, res){
     res.sendFile('trail.html', {root: './client/views'})
