@@ -1,21 +1,25 @@
+main{
+	grid-template-rows: 68px 494px 68px 90px;
+}
+
+#title {
+	text-align: center;
+}
+
 #top_ten {
 	display: grid;
-<<<<<<< HEAD
-    justify-content: center;
-=======
 	justify-content: center;
->>>>>>> 6ab7d1b326476422aee5d9821318a31c4d55eef6
+	
+	font-family: oregonFont;
 }
 
 #top_ten_table {
 	border: 1px solid white;
 	border-collapse: collapse;
-	width: 800px;
-<<<<<<< HEAD
+	width: 700px;
+	height: 400px;
 
 	font-family: oregonFont;
-=======
->>>>>>> 6ab7d1b326476422aee5d9821318a31c4d55eef6
 }
 
 #top_ten_table tr,

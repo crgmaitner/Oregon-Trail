@@ -1,34 +1,32 @@
-var xmlHttp = new XMLHttpRequest();
-
+const ENTER = 13;
+const SPACE = 32;
 const ONE = 49;
 const TWO = 50;
 const THREE = 51;
 const FOUR = 52;
-const ENTER = 13;
-const SPACE = 32;
+const FIVE = 53;
+const SIX = 54;
+
+var sound = {};
 
 // This gets run when any page with an audio player loads
-var sound = undefined;
-function audioLoaded() {
-	xmlHttp.open('GET', '/api/sound', true);
-	xmlHttp.onreadystatechange = function() {
-	    if (this.readyState == 4 && this.status == 200) {
-	    	sound = JSON.parse(this.responseText);
-	    	if (sound['paused'] == false) {
-	    		if (document.getElementById('sound_button') != null) {
-		    		document.getElementById('sound_button').innerHTML = 'Turn sound off';
-		    	}
-				document.getElementById('audio_player').play();
-			}
-			else {
-				if (document.getElementById('sound_button') != null) {
-		    		document.getElementById('sound_button').innerHTML = 'Turn sound on';
-		    	}
-			}
-			document.getElementById('audio_player').currentTime = sound['time'];
-	    }
-	};
-	xmlHttp.send();
+async function audioLoaded() {
+	let response = await fetch('/api/sound');
+	sound = await response.json();
+	
+	if (sound['paused'] == false) {
+		if (document.getElementById('sound_button') != null) {
+    		sound_button.innerHTML = 'Turn sound off';
+    	}
+		audio_player.play();
+	}
+	else {
+		if (document.getElementById('sound_button') != null) {
+    		sound_button.innerHTML = 'Turn sound on';
+    	}
+	}
+
+	audio_player.currentTime = sound['time'];
 }
 
 // This is run by menu_button to fade in/out
@@ -50,7 +48,7 @@ function fadeText() {
         }
     }
 
-    document.getElementById('fade_text').style.opacity = fade_index;   
+    fade_text.style.opacity = fade_index;   
 }
 
 // These gets run before any page moves to another page
@@ -58,35 +56,34 @@ function goToMenu() {
     saveSoundState('/mainmenu');
 }
 
+function goToInfo() {
+	saveSoundState('/info');
+}
+
 function goToTopTen() {
     saveSoundState('/topten');
 }
 
-function goToSetup() {
-    xmlHttp.open('Get', '/api/game/reset', true);
-    xmlHttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            saveSoundState('/setup');
-        }
-    };
-    xmlHttp.send();
+async function goToSetup() {
+	let response = await fetch('/api/game/reset');
+    saveSoundState('/setup');
 }
 
 function goToTrail() {
     saveSoundState('/trail');
 }
 
-function saveSoundState(where_to) {
+async function saveSoundState(where_to) {
 	if (document.getElementById('audio_player') != null) {
-		xmlHttp.open('PUT', '/api/sound', true);
-		xmlHttp.setRequestHeader('Content-type','application/json');
-		xmlHttp.onreadystatechange = function() {
-	        if (this.readyState == 4 && this.status == 200) {
-	            window.location = where_to;
-	        }
-	    };
-		sound['time'] = document.getElementById('audio_player').currentTime
-		xmlHttp.send(JSON.stringify(sound));
+		sound['time'] = audio_player.currentTime
+		let response = await fetch('/api/sound', {
+			method: 'PUT',
+			credentials: 'same-origin',
+			headers: {'Content-Type': 'application/json'},
+			redirect: 'follow',
+			body: JSON.stringify(sound)
+		});
+		window.location = where_to;
 	}
 	else {
 		window.location = where_to;

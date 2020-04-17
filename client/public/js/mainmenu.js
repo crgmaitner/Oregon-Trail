@@ -3,13 +3,13 @@ document.addEventListener('DOMContentLoaded', onready);
 // This function runs when the webpage loads
 function onready() {
     // Add Event Lsitener for audio loaded
-    document.getElementById('audio_player').addEventListener('loadeddata', audioLoaded);
+    audio_player.addEventListener('loadeddata', audioLoaded);
 
 	// Add Event Lsitener for button clicks
-    document.getElementById('button_1').addEventListener('click', goToSetup);
-    document.getElementById('button_2').addEventListener('click', getInfo);
-    document.getElementById('button_3').addEventListener('click', goToTopTen);
-    document.getElementById('button_4').addEventListener('click', adjustSound);
+    button_1.addEventListener('click', goToSetup);
+    button_2.addEventListener('click', goToInfo);
+    button_3.addEventListener('click', goToTopTen);
+    button_4.addEventListener('click', adjustSound);
 
     // Add Event Lsitener for keyup
     document.addEventListener('keyup', checkKeyPress);
@@ -20,7 +20,7 @@ function checkKeyPress(e) {
         goToSetup();
     }
     else if (e.keyCode == TWO) {
-        getInfo();
+        goToInfo();
     }
     else if (e.keyCode == THREE) {
         goToTopTen();
@@ -32,7 +32,7 @@ function checkKeyPress(e) {
 
 // This function runs when you press 2
 function getInfo() {
-    document.getElementById('menu_button').innerHTML = 'Press SPACE BAR to continue';
+    menu_button.innerHTML = 'Press SPACE BAR to continue';
 }
 
 function adjustSound() {

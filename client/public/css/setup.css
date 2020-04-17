@@ -1,3 +1,73 @@
+main {
+	grid-template-rows: 68px 494px 68px 90px;
+}
+
 #setup_options {
 	margin: 84px 200px;
+}
+
+#players_image {
+	width: 1160px;
+	height: 432px;
+}
+
+.name_screen {
+	grid-template-rows: 432px 288px;
+}
+
+#name_options {
+	margin: 0 280px 0 120px;
+
+	height: 288px;
+}
+
+.names_screen {
+	grid-template-rows: 432px 198px 90px;
+}
+
+#names_options {
+	margin: 0 280px 0 0;
+
+	height: 288px;
+}
+
+#names_options p {
+	margin: 0;
+	padding: 0;
+}
+
+input[type=text] {
+	background-color: black;
+
+	padding-left: 8px;
+	border: none;
+	border-bottom: 1px solid white;
+
+	width: 360px;
+
+	font-family: oregonFont;
+	font-size: 24px;
+	color: white;
+}
+
+input[type=submit] {
+	visibility: hidden;
+}
+
+#month_options {
+	margin: 50px 200px;
+}
+
+.summary_screen {
+	grid-template-rows: 630px 90px;
+}
+
+#summary_options {
+	display: grid;
+	grid-template-columns: 200px auto;
+	align-items: center;
+	grid-column-gap: 80px;
+
+	padding-left: 40px;
+	padding-right: 200px;
 }

@@ -122,7 +122,7 @@ exports.changePace = function(req, res) {
 	}
 
 	res.setHeader('Content-Type', 'text/plain');
-	res.send(game_data.currentPace.name);
+	res.send({'pace': game_data.currentPace.name});
 };
 
 exports.updateGame = function(req, res) {

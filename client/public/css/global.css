@@ -22,7 +22,6 @@ body {
 
 main {
     display: grid;
-    grid-template-rows: 68px 494px 68px 90px;
     
     background-color: black;
 
@@ -58,9 +57,6 @@ main {
 
 .menu_button {
 	background-color: rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
-    
-    padding: 12px 20px;
     
 	font-family: oregonFont;
     font-size: 28px;
@@ -68,4 +64,9 @@ main {
     cursor: pointer;
     text-align: center;
     user-select: none;
+}
+
+.background_button {
+    border-radius: 12px;
+    padding: 16px 20px;
 }
