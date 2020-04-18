@@ -25,6 +25,9 @@ async function getProfession() {
     button_3.addEventListener('click', function() {
         putProfession('Farmer');
     });
+    button_3.addEventListener('click', function() {
+        getAboutProfession();
+    });
 
     // Add Event Lsitener for menu_button click
     fade_text.addEventListener('click', goToMenu);
@@ -59,10 +62,45 @@ async function checkKeyPress(e) {
         putProfession('Farmer');
     }
     else if (e.keyCode == FOUR) {
-        // todo: go to larn more page
+        getAboutProfession();
     }
     else if (e.keyCode == SPACE) {
         goToMenu();
+    }
+}
+
+async function getAboutProfession() {
+    // Clear timer
+    clearInterval(timer);
+
+    // Remove Event Lsitener for keyup
+    document.removeEventListener('keyup', checkKeyPress);
+
+    let response = await fetch('/api/setup/screen/1');
+    let html = await response.text();
+
+    main_screen.innerHTML = html;
+
+    // Add Event Lsitener for menu_button click
+    fade_text.addEventListener('click', getProfession);
+
+    // Create timer that runs over 75ms (.075s)
+    timer = setInterval(fadeText, 75);
+
+    // Add Event Lsitener for keyup
+    document.addEventListener('keyup', checkKeyPressAboutProfession);
+}
+
+// This gets run when keyup
+async function checkKeyPressAboutProfession(e) {
+    if (e.keyCode == SPACE) {
+        // Clear timer
+        clearInterval(timer);
+
+        // Remove Event Lsitener for keyup
+        document.removeEventListener('keyup', checkKeyPressAboutProfession);
+
+        getProfession();
     }
 }
 
@@ -73,7 +111,7 @@ async function getName() {
     // Remove Event Lsitener for keyup
     document.removeEventListener('keyup', checkKeyPress);
 
-    let response = await fetch('/api/setup/screen/1');
+    let response = await fetch('/api/setup/screen/2');
     let html = await response.text();
 
     main_screen.innerHTML = html;
@@ -87,16 +125,13 @@ function putName(form) {
 }
 
 async function getNames(leader_name) {
-    let response = await fetch('/api/setup/screen/2');
+    let response = await fetch('/api/setup/screen/3');
     let html = await response.text();
 
     main_screen.innerHTML = html;
 
     main_screen.classList.remove('name_screen');
     main_screen.classList.add('names_screen');
-
-    // Create timer that runs over 75ms (.075s)
-    timer = setInterval(fadeText, 75);
 
     name_1.value = leader_name;
     name_1.readOnly = true;
@@ -112,7 +147,7 @@ async function putNames(form) {
     }
 
     if (form[1].value == '') {
-        names[0] = 'Pete';
+        names[1] = 'Pete';
     }
     else {
         names[1] = form[1].value;
@@ -152,7 +187,7 @@ async function putNames(form) {
 }
 
 async function getMonth() {
-    let response = await fetch('/api/setup/screen/3');
+    let response = await fetch('/api/setup/screen/4');
     let html = await response.text();
 
     main_screen.innerHTML = html;
@@ -173,7 +208,7 @@ async function getMonth() {
     button_5.addEventListener('click', function() {
         putMonth('July');
     });
-    button_6.addEventListener('click', goToTrail);
+    button_6.addEventListener('click', getAboutMonth);
 
     // Add Event Lsitener for keyup
     document.addEventListener('keyup', checkKeyPressMonth);
@@ -210,12 +245,44 @@ async function checkKeyPressMonth(e) {
         putMonth('July');
     }
     else if (e.keyCode == SIX) {
-        // todo: ask for advice
+        getAboutMonth();
+    }
+}
+
+async function getAboutMonth() {
+    // Remove Event Lsitener for keyup
+    document.removeEventListener('keyup', checkKeyPressMonth);
+
+    let response = await fetch('/api/setup/screen/5');
+    let html = await response.text();
+
+    main_screen.innerHTML = html;
+
+    // Add Event Lsitener for menu_button click
+    fade_text.addEventListener('click', getMonth);
+
+    // Create timer that runs over 75ms (.075s)
+    timer = setInterval(fadeText, 75);
+
+    // Add Event Lsitener for keyup
+    document.addEventListener('keyup', checkKeyPressAboutMonth);
+}
+
+// This gets run when keyup
+async function checkKeyPressAboutMonth(e) {
+    if (e.keyCode == SPACE) {
+        // Clear timer
+        clearInterval(timer);
+
+        // Remove Event Lsitener for keyup
+        document.removeEventListener('keyup', checkKeyPressAboutMonth);
+        
+        getMonth();
     }
 }
 
 async function getSummary() {
-    let response = await fetch('/api/setup/screen/4');
+    let response = await fetch('/api/setup/screen/6');
     let html = await response.text();
 
     // Remove Event Lsitener for keyup

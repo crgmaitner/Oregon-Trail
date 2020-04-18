@@ -8,3 +8,14 @@
     font-family: oregonFont;
     text-align: center;
 }
+
+#menu_button {
+	background-color: rgba(0, 0, 0, 0.25);
+    
+	font-family: oregonFont;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+}
