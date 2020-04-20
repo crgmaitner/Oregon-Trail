@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-<<<<<<< HEAD
 app.use(express.static('client/public'))
 const port = 1337
 
@@ -14,11 +13,6 @@ const soundController = require('./controllers/soundController')
 // Page Requests
 //////////////////////////////
 
-=======
-app.use(express.static('client/public'));
-const port = 1337
-
->>>>>>> 26ebc8509faccafe89770c9e9ab93cc06b77fc2f
 app.get('/', function (req, res) {
     res.sendFile('index.html', {root: './client/views' })
 })
@@ -28,11 +22,7 @@ app.get('/mainmenu', function (req, res) {
 })
 
 app.get('/info', function (req, res) {
-<<<<<<< HEAD
     res.sendFile('info.html', {root: './client/views' })
-=======
-    res.sendFile('info.html', {root: './client/views'})
->>>>>>> 26ebc8509faccafe89770c9e9ab93cc06b77fc2f
 })
 
 app.get('/setup', function (req, res) {
@@ -46,7 +36,6 @@ app.get('/topten', function (req, res) {
 app.get('/trail', function (req, res){
     res.sendFile('trail.html', {root: './client/views'})
 })
-<<<<<<< HEAD
 
 //////////////////////////////
 // API Routes
@@ -94,7 +83,4 @@ app.route('/api/sound/reset')
     .get(soundController.resetSound)
 
 
-=======
-    
->>>>>>> 26ebc8509faccafe89770c9e9ab93cc06b77fc2f
 app.listen(port, () => console.log(`Listening on port ${port}.`))

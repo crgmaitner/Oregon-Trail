@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', onready);
 
 // This function runs when the webpage loads
@@ -100,12 +99,4 @@ function checkKeyPressMenu(e) {
     if (e.keyCode == SPACE) {
 		goToMenu();
     }
-=======
-document.addEventListener("DOMContentLoaded", onready);
-
-// This function runs when the webpage loads
-function onready() {
-	// Add Event Listener for audio loaded
-    document.getElementById("audio_player").addEventListener("loadeddata", audioLoaded);
->>>>>>> 26ebc8509faccafe89770c9e9ab93cc06b77fc2f
 }
