@@ -5,10 +5,10 @@ function onready() {
     // Add Event Lsitener for audio loaded
     audio_player.addEventListener('loadeddata', audioLoaded);
     
-    // Add Event Lsitener for menu_button click
+    // Add Event Listener for menu_button click
     fade_text.addEventListener('click', goToMenu);
 
-    // Add Event Lsitener for keyup
+    // Add Event Listener for keyup
     document.addEventListener('keyup', checkKeyPress);
     
     // Create timer that runs over 100ms (.100s)

@@ -2,19 +2,19 @@ document.addEventListener('DOMContentLoaded', onready);
 
 // This function runs when the webpage loads
 async function onready() {
-	// Add Event Lsitener for audio loaded
+	// Add Event Listener for audio loaded
     audio_player.addEventListener('loadeddata', audioLoaded);
 
 	let response = await fetch('/api/game/game');
 	let stats = await response.json();
 
-	// Add Event Lsitener for keyup
+	// Add Event Listener for keyup
 	document.addEventListener('keyup', checkKeyPress);
 
     updateValues(stats);
 
-	// Create timer that runs over 75ms (.075s)
-    var timer = setInterval(fadeText, 75);
+	// Create timer that runs over 100ms (.100s)
+    var timer = setInterval(fadeText, 100);
 }
 
 async function updateValues(stats) {
