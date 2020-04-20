@@ -50,6 +50,6 @@ exports.getWeather = function() {
 			best_weather = weathers[i];
 		}
 	}
-
+	
 	return best_weather;
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 main {
 	grid-template-rows: 68px 494px 68px 90px;
 }
@@ -70,4 +71,11 @@ input[type=submit] {
 
 	padding-left: 40px;
 	padding-right: 200px;
+=======
+#setup_options {
+	align-self: flex-start;
+
+	margin-left: 200px;
+	margin-right: 200px;
+>>>>>>> 26ebc8509faccafe89770c9e9ab93cc06b77fc2f
 }

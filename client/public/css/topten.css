@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 main{
 	grid-template-rows: 68px 494px 68px 90px;
 }
@@ -11,13 +12,32 @@ main{
 	justify-content: center;
 	
 	font-family: oregonFont;
+=======
+#top_ten_title{
+	justify-self: flex-start;
+    align-self: center;
+
+    margin-left: 200px;
+    margin-right: 200px;
+    
+    font-family: oregonFont;
+    text-align: center;
+}
+
+#top_ten {
+	align-self: center;
+>>>>>>> 26ebc8509faccafe89770c9e9ab93cc06b77fc2f
 }
 
 #top_ten_table {
 	border: 1px solid white;
 	border-collapse: collapse;
+<<<<<<< HEAD
 	width: 700px;
 	height: 400px;
+=======
+	width: 800px;
+>>>>>>> 26ebc8509faccafe89770c9e9ab93cc06b77fc2f
 
 	font-family: oregonFont;
 }
