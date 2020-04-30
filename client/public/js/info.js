@@ -26,7 +26,6 @@ function checkKeyPress(e) {
 }
 
 function goToMenu() {
-    saveJSON();
     window.location = "/mainmenu";
 }
 
