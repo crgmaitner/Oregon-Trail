@@ -19,7 +19,7 @@ prof_screen += '<td>Be a farmer from Illinois</td>';
 prof_screen += '</tr>';
 prof_screen += '<tr class="normal_button" id="button_4">';
 prof_screen += '<td>&nbsp;&nbsp;4.&nbsp;</td>';
-prof_screen += '<td>Find out the differences between these choices</td>';
+prof_screen += '<td>What\'s the difference?</td>';
 prof_screen += '</tr>';
 prof_screen += '</table>';
 prof_screen += '</div>';
