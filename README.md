@@ -6,7 +6,7 @@ In order to access this game and set out on your journey to the promised land of
 1. Clone this repository down to your machine.
 2. Ensure you have a gitbash terminal installed. Follow the link here and choose the one that is appropriate for your machine: https://git-scm.com/downloads
 3. Ensure that you have Node.js installed on your machine as well. Follow the link here and choose the one that is recommended for most users: https://nodejs.org/en/
-4. Navigate into the MasterProject directory within your gitbash terminal. You'll know you've made it when you see "(master)" in the command line prompt. Alternatively, right clicking on the "MasterProject" directory folder and selecting "Git Bash Here" will also bring you to the correct location.
+4. Navigate into the Oregon-Trail directory within your gitbash terminal. You'll know you've made it when you see "(master)" in the command line prompt. Alternatively, right clicking on the "MasterProject" directory folder and selecting "Git Bash Here" will also bring you to the correct location.
 5. Run the command "node server/oregonTrail.js" in the bash terminal. The message "Server listening on port 1337." will tell you it is running properly.
 6. Open your favorite web browser and navigate to "localhost:1337" in the search bar.
 7. You've made it to the trail! Good luck!
